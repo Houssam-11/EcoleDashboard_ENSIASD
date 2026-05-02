@@ -1,0 +1,111 @@
+:root {
+  --sidebar-width: 220px;
+  --primary: #4e73df;
+  --success: #1cc88a;
+  --info: #36b9cc;
+  --warning: #f6c23e;
+  --danger: #e74a3b;
+}
+
+/* login */
+.bg-login {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  min-height: 100vh;
+}
+.login-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* layout */
+body {
+  font-size: 0.875rem;
+  background-color: #f8f9fc;
+}
+.wrapper {
+  min-height: calc(100vh - 56px - 50px);
+}
+
+/* sidebar */
+.sidebar {
+  min-width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  transition: all 0.3s;
+}
+.sidebar .nav-link {
+  color: rgba(255,255,255,0.65);
+  border-radius: 6px;
+  padding: 0.45rem 0.75rem;
+  margin-bottom: 2px;
+  font-size: 0.82rem;
+  transition: all 0.2s;
+}
+.sidebar .nav-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.1);
+}
+.sidebar .nav-link.active {
+  color: #fff;
+  background: rgba(255,255,255,0.15);
+  font-weight: 600;
+}
+
+/* KPI Cards */
+.kpi-card {
+  border-radius: 10px;
+  transition: transform 0.15s;
+}
+.kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+/* main Content */
+.main-content {
+  overflow-x: hidden;
+  min-height: calc(100vh - 56px - 50px);
+}
+
+/* cards */
+.card {
+  border-radius: 10px;
+}
+.card-header {
+  border-radius: 10px 10px 0 0 !important;
+  font-size: 0.85rem;
+}
+
+/* tables */
+.table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  font-weight: 600;
+}
+.table td { vertical-align: middle; }
+
+/* footer */
+.footer {
+  background: #fff;
+  border-top: 1px solid #e3e6f0;
+  height: 50px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .sidebar { min-width: 0; max-width: 0; overflow: hidden; }
+  .sidebar.show { min-width: var(--sidebar-width); max-width: var(--sidebar-width); }
+  .main-content { padding: 1rem !important; }
+}
+
+/* badges */
+.badge { font-size: 0.7rem; font-weight: 600; }
+
+/* progress bars */
+.progress { border-radius: 10px; }
+.progress-bar { border-radius: 10px; }
+
+/* scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
